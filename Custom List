@@ -1,0 +1,65 @@
+<body>
+
+  <style>
+  .mixed-list {
+  list-style-type: none;
+  counter-reset: list-counter;
+}
+
+.mixed-list li {
+  position: relative;
+  padding-left: 2em;
+}
+
+.mixed-list li:before {
+  counter-increment: list-counter;
+  content: counter(list-counter)
+  color: #ffffff;
+  position: absolute;
+  left: -1.5em;
+}
+
+.mixed-list ul {
+  list-style: none;
+  padding-left: 1.5em;
+}
+
+.mixed-list ul li:nth-child(1) {
+  list-style-type: disc;
+}
+
+.mixed-list ul li:nth-child(2) {
+  list-style-type: circle;
+}
+
+.mixed-list ul li:nth-child(3) {
+  list-style-type: square;
+}
+</style>
+
+
+    <ol class="mixed-list">
+      <li>1
+        <ul>
+          <li>Disc item</li>
+          <li>Circle item</li>
+          <li>Square item</li>
+        </ul>
+      </li>
+      <li>C
+        <ul>
+          <li>Disc item</li>
+          <li>Circle item</li>
+          <li>Square item</li>
+        </ul>
+      </li>
+      <li>V
+        <ul>
+          <li>Disc item</li>
+          <li>Circle item</li>
+          <li>Square item</li>
+        </ul>
+      </li>
+    </ol>
+
+  </body>
